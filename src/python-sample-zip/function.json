@@ -1,0 +1,24 @@
+{
+  "Architectures": [
+    "x86_64"
+  ],
+  "EphemeralStorage": {
+    "Size": 512
+  },
+  "FunctionName": "python-sample-zip",
+  "Handler": "lambda_function.lambda_handler",
+  "LoggingConfig": {
+    "LogFormat": "Text",
+    "LogGroup": "/aws/lambda/python-sample-zip"
+  },
+  "MemorySize": 128,
+  "Role": "arn:aws:iam::{{ must_env `AWS_ACCOUNT_ID` }}:role/python-sample-zip",
+  "Runtime": "python3.12",
+  "SnapStart": {
+    "ApplyOn": "None"
+  },
+  "Timeout": 3,
+  "TracingConfig": {
+    "Mode": "PassThrough"
+  }
+}
